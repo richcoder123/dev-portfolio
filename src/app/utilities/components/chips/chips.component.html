@@ -1,0 +1,11 @@
+<div *ngFor="let chipConfig of chipsConfig | keyvalue">
+    <mat-card class="card-style">
+        <mat-card-title> {{chipConfig.key}} </mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+        <mat-chip-list>
+            <mat-chip *ngFor="let item of chipConfig.value">
+              {{ item }}
+            </mat-chip>
+          </mat-chip-list>
+    </mat-card>
+</div>

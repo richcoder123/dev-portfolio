@@ -1,0 +1,13 @@
+<div *ngFor="let sectionDetails of sectionConfig" class="container">
+
+    <div class="section-left">{{ sectionDetails.title }}</div>
+
+    <div class="section-middle">
+        <mat-chip-list>
+            <mat-chip *ngFor="let item of sectionDetails.content">
+              {{ item }}
+            </mat-chip>
+          </mat-chip-list>
+    </div>
+
+</div>

@@ -1,6 +1,7 @@
-<mat-tab-group mat-align-tabs="center">
-    <mat-tab label="About Me">Content 1</mat-tab>
-    <mat-tab label="Technical Skills">Content 2</mat-tab>
-    <mat-tab label="Work Experience">Content 3</mat-tab>
-    <mat-tab label="Contact">Content 4</mat-tab>
-  </mat-tab-group>
+<mat-tab-group mat-align-tabs="center" (selectedTabChange)="tabClick($event)">
+    <mat-tab label="About Me"></mat-tab>
+    <mat-tab label="Technical Skills"></mat-tab>
+    <mat-tab label="Work Experience"></mat-tab>
+    <mat-tab label="Contact"></mat-tab>
+</mat-tab-group>
+<router-outlet></router-outlet>
