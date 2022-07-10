@@ -14,8 +14,4 @@ export class SectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  abc(sd: any) {
-    let a = 5;
-  }
-
 }

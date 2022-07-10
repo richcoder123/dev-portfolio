@@ -17,6 +17,8 @@ import { ChipsComponent } from './utilities/components/chips/chips.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { SectionComponent } from './utilities/components/section/section.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule, HttpHeaderResponse, HttpHeaders } from '@angular/common/http';
 
 const appRoutes = [
   { path: '', component: AboutMeComponent},
@@ -45,6 +47,9 @@ const appRoutes = [
     MatCardModule,
     MatChipsModule,
     MatFormFieldModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],

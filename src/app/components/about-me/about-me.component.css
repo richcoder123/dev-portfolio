@@ -1,0 +1,21 @@
+.container {
+    box-shadow: 1px 2px 0px -1px rgba(228, 4, 4, 0.2), 0px 1px 1px 0px rgba(173, 0, 0, 0.14), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    width: 800px;
+    margin: 10px auto;
+    display: flex;
+}
+
+.section-left {
+    max-width: 300px;
+    max-height: 600px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.section-middle {
+    padding: 10px;
+}
+
+.img {
+    width: 300px;
+}

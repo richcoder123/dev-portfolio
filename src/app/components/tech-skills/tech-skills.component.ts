@@ -7,18 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechSkillsComponent implements OnInit {
 
-  chipsConfig = {
-    Technologies: ['Javascript', 'Typescript', 'HTML', 'CSS', 'C++', 'C'],
-    Frameworks: ['Angular', 'Protractor', 'Cypress', 'Jasmine'],
-    Tools: ['SQL Developer', 'VS code', 'Putty'],
-    'Version Control': ['Git', 'svn'],
-    'Operating Systems': ['Unix', 'Windows'],
-  };
-
   sectionConfig = [
     {
       title: 'Technologies',
-      content: ['Javascript', 'Typescript', 'HTML', 'CSS', 'C++', 'C']
+      content: ['Javascript', 'Typescript', 'HTML', 'CSS', 'C++']
     },
     {
       title: 'Frameworks',
@@ -26,8 +18,24 @@ export class TechSkillsComponent implements OnInit {
     },
     {
       title: 'Tools',
-      content: ['SQL Developer', 'VS code', 'Putty']
-    }
+      content: ['VS code', 'Putty', 'SQL Developer']
+    },
+    {
+      title: 'Products',
+      content: ['Singleview', 'CATIA', 'ENOVIA']
+    },
+    {
+      title: 'Miscellaneous',
+      content: ['Code reviews', 'Feature Grooming', 'Mentoring']
+    },
+    {
+      title: 'Version Control',
+      content: ['Git', 'svn']
+    },
+    {
+      title: 'Operating Systems',
+      content: ['Windows', 'Unix']
+    },
   ];
 
   constructor() { }
