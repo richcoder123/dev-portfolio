@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'dev-portfolio';
 
-  urls = ['aboutMe', 'techSkills', 'workExp', 'contactDetails'];
+  urls = ['aboutMe', 'techSkills', 'workExp', 'contactDetails', 'comingUp'];
 
   constructor(private router: Router) {}
 

@@ -19,7 +19,8 @@ import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { SectionComponent } from './utilities/components/section/section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar'
+import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar';
+import { ComingUpComponent } from './components/coming-up/coming-up.component'
 
 const appRoutes = [
   { path: '', component: AboutMeComponent},
@@ -27,6 +28,7 @@ const appRoutes = [
   { path: 'techSkills', component: TechSkillsComponent},
   { path: 'workExp', component: WorkExpComponent},
   { path: 'contactDetails', component: ContactDetailsComponent},
+  { path: 'comingUp', component: ComingUpComponent},
 ]
 
 @NgModule({
@@ -39,7 +41,8 @@ const appRoutes = [
     ContactDetailsComponent,
     CardComponent,
     ChipsComponent,
-    SectionComponent
+    SectionComponent,
+    ComingUpComponent
   ],
   imports: [
     BrowserModule,
