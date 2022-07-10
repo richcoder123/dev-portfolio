@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact-details',
@@ -8,6 +9,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact-details.component.css']
 })
 export class ContactDetailsComponent implements OnInit {
+
+  feedbackText = `We all need people who will give us feedback. That's how we improve.
+  Feel free to drop feedback or any comments that you have.
+  Also, you can use this to reach out to me or to invite me to a tech-talk or meetup.`;
 
   sectionConfig = [
     {
@@ -22,7 +27,8 @@ export class ContactDetailsComponent implements OnInit {
   contactForm: any;
   isFormDirty = true;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+    private _snackBar: MatSnackBar) {
     this.contactForm = new FormGroup({
       name: new FormControl('', [ Validators.required ]),
       email: new FormControl('', [ Validators.email ]),
@@ -41,6 +47,11 @@ export class ContactDetailsComponent implements OnInit {
         message: this.contactForm.controls['message'].value 
       }).subscribe(
         response => {
+          this._snackBar.open('Submitted successfully, Thank you !', 'Close', {
+            horizontalPosition: 'left',
+            verticalPosition: 'top'
+          });
+          this.contactForm.reset();
           console.log(response);
         }
       );

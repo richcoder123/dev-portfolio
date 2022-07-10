@@ -1,10 +1,7 @@
 <div class="container">
     <mat-card class="example-card">
         <mat-card-content>
-            We all need people who will give us feedback. That's how we improve.
-            Feel free to drop feedback or any comments that you have.
-            <br>
-            Also, you can use this to reach out to me or to invite me to a tech-talk or meetup.
+            {{ feedbackText }}
         </mat-card-content>
       </mat-card>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
