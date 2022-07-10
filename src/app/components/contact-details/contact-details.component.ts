@@ -47,7 +47,7 @@ export class ContactDetailsComponent implements OnInit {
         message: this.contactForm.controls['message'].value 
       }).subscribe(
         response => {
-          this._snackBar.open('Submitted successfully, Thank you !', 'Close', {
+          this._snackBar.open('Submitted successfully, Thank you !','', {
             horizontalPosition: 'left',
             verticalPosition: 'top'
           });

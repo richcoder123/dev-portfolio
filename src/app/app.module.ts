@@ -19,7 +19,7 @@ import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { SectionComponent } from './utilities/components/section/section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {MatSnackBarModule} from '@angular/material/snack-bar'
+import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar'
 
 const appRoutes = [
   { path: '', component: AboutMeComponent},
@@ -54,7 +54,7 @@ const appRoutes = [
     MatSnackBarModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2000}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
